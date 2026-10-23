@@ -177,34 +177,117 @@ main aside ul {
   }
 }
 
+
 @media print {
-  body {
-    padding-left: 0;
-    padding-right: 0;
+
+  @page {
+    size: letter portrait;
+    margin: 0.20in;
   }
+
+  html, body {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+    font-size: 9px !important;
+    line-height: 1.12 !important;
+  }
+
   a[href]:after {
     content: none !important;
   }
-  h3 {
-    font-size: 12px;
+
+  /* Header */
+  header {
+    margin-bottom: 3px !important;
   }
-  .name {
-    font-size: 24px;
+
+  header .name {
+    font-size: 26px !important;
+    line-height: 1.1 !important;
   }
-  #contact {
-    font-size: 12px;
+
+  header #contact {
+    font-size: 9px !important;
+    padding: 3px 0 !important;
   }
-  #workExperience {
-    float: left !important;
-    width: 65% !important;
-    display: inline-block !important;
+
+  main.main {
+    margin-top: 5px !important;
   }
-  aside {
-    float: right !important;
-    display: inline-block !important;
-    width: 35% !important;
+
+/* Two-column layout */
+#workExperience {
+  float: left !important;
+  width: 65% !important;
+  display: block !important;
+  padding-left: 4px !important;
+  padding-right: 8px !important;
+  box-sizing: border-box !important;
+}
+
+main aside {
+  float: right !important;
+  width: 35% !important;
+  display: block !important;
+  padding-left: 8px !important;
+  padding-right: 4px !important;
+  box-sizing: border-box !important;
+  font-size: 9px !important;
+}
+
+  /* Section titles */
+  main .col h3,
+  main aside h3 {
+    font-size: 12px !important;
+    line-height: 1.1 !important;
+    margin: 3px 0 5px 0 !important;
   }
-  ul {
-    font-size: 14px;
+
+  main .subject {
+    margin-bottom: 6px !important;
+  }
+
+  main .col section .companyName {
+    font-size: 11px !important;
+    line-height: 1.1 !important;
+  }
+
+  main .col section .details {
+    font-size: 9px !important;
+    margin: 2px 0 !important;
+  }
+
+  main .col section .jobInfo {
+    padding-left: 12px !important;
+    margin-top: 2px !important;
+    margin-bottom: 3px !important;
+  }
+
+  main .col section li {
+    font-size: 9px !important;
+    line-height: 1.12 !important;
+    margin-bottom: 2px !important;
+  }
+
+  /* Right column */
+  main aside ul {
+    font-size: 9px !important;
+    line-height: 1.12 !important;
+    margin: 0 0 3px 10px !important;
+    padding: 0 !important;
+  }
+
+  main aside section,
+  main aside .subjectRight,
+  main aside #projects {
+    margin-bottom: 6px !important;
+  }
+
+  .print-hide {
+    display: none !important;
   }
 }
